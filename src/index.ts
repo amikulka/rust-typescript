@@ -1,3 +1,8 @@
-function practice(value: number | undefined): number | undefined {
-  return value === undefined ? undefined : value * 5
-}
+import fs from 'fs'
+
+const fileName = process.argv[2]
+
+fs.readFileSync(fileName)
+  .toString()
+  .split('\n')
+  .forEach((line) => console.log(line))
